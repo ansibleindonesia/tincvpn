@@ -20,10 +20,10 @@ Create a `/hosts` file with the nodes that you want to include in the VPN:
 
 ```
 [vpn]
-node01 vpn_ip=10.0.0.1 ansible_host=162.243.125.98
-node02 vpn_ip=10.0.0.2 ansible_host=162.243.243.235
-node03 vpn_ip=10.0.0.3 ansible_host=162.243.249.86
-node04 vpn_ip=10.0.0.4 ansible_host=162.243.252.151
+node01 vpn_ip=10.0.0.1 ansible_host=162.243.125.98 ansible_port=ssh_port
+node02 vpn_ip=10.0.0.2 ansible_host=162.243.243.235 ansible_port=ssh_port
+node03 vpn_ip=10.0.0.3 ansible_host=162.243.249.86 ansible_port=ssh_port
+node04 vpn_ip=10.0.0.4 ansible_host=162.243.252.151 ansible_port=ssh_port
 
 [removevpn]
 
@@ -43,9 +43,9 @@ All servers listed in the the [vpn] group in the hosts file will be part of the 
 
 ####Remove Servers
 [vpn]
-node01 vpn_ip=10.0.0.1 ansible_host=162.243.125.98
-node02 vpn_ip=10.0.0.2 ansible_host=162.243.243.235
-node03 vpn_ip=10.0.0.3 ansible_host=162.243.249.86
+node01 vpn_ip=10.0.0.1 ansible_host=162.243.125.98 ansible_port=ssh_port
+node02 vpn_ip=10.0.0.2 ansible_host=162.243.243.235 ansible_port=ssh_port
+node03 vpn_ip=10.0.0.3 ansible_host=162.243.249.86 ansible_port=ssh_port
 
 [removevpn]
 node04 vpn_ip=10.0.0.4 ansible_host=162.243.252.151
