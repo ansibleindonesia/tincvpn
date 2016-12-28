@@ -1,0 +1,5 @@
+[vpn]
+node01 vpn_ip=vpn_ip ansible_port=port_ssh ansible_host=public_ip
+node02 vpn_ip=vpn_ip ansible_port=port_ssh ansible_host=public_ip
+
+[removevpn]

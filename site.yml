@@ -1,0 +1,9 @@
+---
+
+- hosts: vpn
+  roles:
+    - tinc
+
+- hosts: removevpn
+  roles:
+    - tinc-remove
