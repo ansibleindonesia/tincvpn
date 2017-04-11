@@ -6,3 +6,4 @@ vpn_interface: tun0
 
 vpn_netmask: 255.255.255.0
 vpn_subnet_cidr_netmask: 32
+port_vpn: 1945

@@ -73,6 +73,13 @@
     create=yes
   notify:
     - restart tinc
+- name: ensure tinc port
+  lineinfile: >
+    dest=/etc/tinc/{{ netname }}/hosts/{{ inventory_hostname }}
+    line="Port = {{ port_vpn }}"
+    create=yes
+  notify:
+    - restart tinc
 
 - name: check whether /etc/tinc/netname/hosts/inventory_hostname contains "-----END RSA PUBLIC KEY-----"
   command: awk '/^-----END RSA PUBLIC KEY-----$/'  /etc/tinc/{{ netname }}/hosts/{{ inventory_hostname }}
